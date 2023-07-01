@@ -1,4 +1,5 @@
 package knowledge.AddShortestEnd
+
 public class AddShortestEnd {
 
 	public static String shortestEnd(String s) {
