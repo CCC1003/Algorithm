@@ -1,4 +1,4 @@
-package knowledge.AddShortestEnd
+package knowledge.Manacher;
 
 public class AddShortestEnd {
 
