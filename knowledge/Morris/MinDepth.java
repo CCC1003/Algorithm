@@ -42,7 +42,6 @@ public class MinDepth {
         return 1 + Math.min(leftH, rightH);
     }
 
-    //morris遍历
 // 下面的方法是morris遍历的解
     public static int minDepth2(TreeNode head) {
         if (head == null) {
