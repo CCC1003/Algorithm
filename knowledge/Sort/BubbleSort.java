@@ -24,4 +24,6 @@ public class BubbleSort {
         arr[j]=arr[i]^arr[j];
         arr[i]=arr[i]^arr[j];
     }
+
+
 }
