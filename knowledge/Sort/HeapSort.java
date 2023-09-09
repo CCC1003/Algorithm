@@ -12,8 +12,8 @@ public class HeapSort {
         if (arr == null && arr.length < 2) {
             return;
         }
-        for (int i = 0; i < arr.length; i++) {
-            heatInsert(arr, i);  //把数组调整为大根堆结构
+        for (int i = arr.length - 1; i >= 0; i--) {
+            heapify(arr, i, arr.length);
         }
         int heapSize = arr.length;
         swap(arr, 0, --heapSize);
