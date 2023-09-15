@@ -10,20 +10,20 @@ public class CountSort {
         if (arr == null || arr.length < 2) {
             return;
         }
-        int max=Integer.MIN_VALUE;
-        int min=Integer.MAX_VALUE;
-        for (int i=0;i<arr.length;i++){
-            min=Math.min(min,arr[i]);
-            max=Math.max(max,arr[i]);
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        for (int i = 0; i < arr.length; i++) {
+            max = Math.max(arr[i], max);
+            min = Math.min(arr[i], min);
         }
-        int[] count=new int[max-min+1];
-        for (int i=0;i<arr.length;i++){
-            count[arr[i]-min]++;
+        int[] count = new int[max - min + 1];
+        for (int i = 0; i < arr.length; i++) {
+            count[arr[i] - min]++;
         }
-        int i = 0;
-        for (int j = 0; j < count.length; j++) {
-            while (count[j]--> 0) {
-                arr[i++] = j+min;
+        int j = 0;
+        for (int i = 0; i < count.length; i++) {
+            while (count[i]-- > 0) {
+                arr[j++] = i + min;
             }
         }
     }
