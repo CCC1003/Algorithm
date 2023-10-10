@@ -35,11 +35,4 @@ public class MergeSort {
             arr[l+i]=help[i];
         }
     }
-    public static void merge(int arr[],int l,int r) {
-        if (l==r){
-            return;
-        }
-        int mid =
-        mergeSort(arr,l,);
-    }
 }
