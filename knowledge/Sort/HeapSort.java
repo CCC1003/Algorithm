@@ -1,5 +1,9 @@
 package knowledge.Sort;
 
+import javax.swing.*;
+
+import java.net.IDN;
+
 import static knowledge.Sort.InsertionSort.swap;
 
 /**
@@ -23,13 +27,13 @@ public class HeapSort {
         }
     }
 
-    private static void heatInsert(int[] arr, int index) {
-        while (arr[index] > arr[(index - 1) / 2]) {
-            swap(arr, index, (index - 1) / 2);
-            index = (index - 1) / 2;
-        }
-    }
-
+    //当大根堆插入时候使用
+//    private static void heatInsert(int[] arr, int index) {
+//        while (arr[index] > arr[(index - 1) / 2]) {
+//            swap(arr, index, (index - 1) / 2);
+//            index = (index - 1) / 2;
+//        }
+//    }
     private static void heapify(int[] arr, int index, int heapSize) {
         int left = index * 2 + 1;
         while (left < heapSize) {
