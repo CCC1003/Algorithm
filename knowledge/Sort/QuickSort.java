@@ -36,7 +36,7 @@ public class QuickSort {
             }
         }
         swap(arr, more, r);
-        return new int[]{less + 1, more};
+        return new int[]{less + 1, more};//等于划分值 左右两边界
     }
 
 }
