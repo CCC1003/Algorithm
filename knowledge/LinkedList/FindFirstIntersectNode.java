@@ -18,13 +18,14 @@ public class FindFirstIntersectNode {
         if (head1 == null || head2 == null) {
             return null;
         }
+
         Node loop1 = getLoopNode(head1);
         Node loop2 = getLoopNode(head2);
 
         if (loop1 == null && loop2 == null) {
             return noLoop(head1, head2);
         }
-        if (loop1 != null && loop2 == null) {
+        if (loop1 != null && loop2 != null) {
             return bothLoop(head1, loop1, head2, loop2);
         }
         return null;
@@ -59,11 +60,11 @@ public class FindFirstIntersectNode {
         int n = 0;
         Node cur1 = head1;
         Node cur2 = head2;
-        if (cur1.next != null) {
+        while (cur1.next != null) {
             n++;
             cur1 = cur1.next;
         }
-        if (cur2.next != null) {
+        while (cur2.next != null) {
             n--;
             cur2 = cur2.next;
         }
