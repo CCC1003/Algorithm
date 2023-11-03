@@ -70,5 +70,4 @@ public class CopyListWithRandom {
         }
         return res;
     }
-
 }
