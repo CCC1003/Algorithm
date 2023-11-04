@@ -15,8 +15,11 @@ public class LowestCommonAncestor {
         }
     }
 
+    //两种情况
+    //1、o1是o2的最低公共祖先或者o2是o1的最低公共祖先
+    //2、o1和o2不互为最低公共祖先，需要向上汇聚查找
     public static Node lowestAncestor(Node head, Node o1, Node o2) {
-        if (head == null || head == o1 || head == o2) {
+        if (head == null || head == o1 || head == o2) { //遇到谁返回谁（null、o1、o2）
             return head;
         }
         Node left = lowestAncestor(head.left, o1, o2);
